@@ -4,10 +4,10 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule
 from scrapy_redis.spiders import RedisCrawlSpider
 from redisScrapyPro.items import RedisscrapyproItem
-
+from scrapy.conf import settings
 
 class RidesdemoSpider(RedisCrawlSpider):
-    name = 'ridesDemo'
+    name = 'redisDemo'
 
     # scrapy_redis的调度器队列的名称，最终我们会根据该队列的名称向调度器队列中扔一个起始url
     redis_key = "redisQueue"
